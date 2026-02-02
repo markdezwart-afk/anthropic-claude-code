@@ -1,0 +1,24 @@
+{
+  "name": "riksja-travel-chatbot",
+  "version": "1.0.0",
+  "description": "AI Customer Support Chatbot for Riksja Travel - Helps users through their travel decision-making journey",
+  "main": "src/chatbot.js",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1",
+    "dev": "npx http-server . -p 8080 -c-1 -o",
+    "build": "echo 'No build step required - vanilla JS'",
+    "test": "echo 'Tests coming soon'"
+  },
+  "keywords": [
+    "chatbot",
+    "travel",
+    "customer-support",
+    "riksja-travel",
+    "ai-assistant"
+  ],
+  "author": "Riksja Travel",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

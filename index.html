@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riksja Travel - AI Reisassistent</title>
+    <link rel="stylesheet" href="src/chatbot.css">
+    <style>
+        /* Demo page styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a5f4a 0%, #2d8b6e 50%, #3ba078 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .demo-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .demo-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .demo-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .demo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .demo-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        .info-card h2 {
+            color: #1a5f4a;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .info-card h3 {
+            color: #2d8b6e;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-card p, .info-card li {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-card ul li {
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .info-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2d8b6e;
+            font-weight: bold;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            background: #f8faf9;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-item .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-item span {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .destinations-preview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .destination-tag {
+            background: linear-gradient(135deg, #1a5f4a, #2d8b6e);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .cta-section p {
+            color: #1a5f4a;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .arrow-indicator {
+            animation: bounce 2s infinite;
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(45deg); }
+            40% { transform: translateY(-10px) rotate(45deg); }
+            60% { transform: translateY(-5px) rotate(45deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <header class="demo-header">
+            <h1>Riksja Travel AI Reisassistent</h1>
+            <p>Uw persoonlijke gids voor het plannen van de perfecte reis</p>
+        </header>
+
+        <div class="demo-content">
+            <div class="info-card">
+                <h2>Welkom bij Riksja Travel</h2>
+                <p>
+                    Al meer dan 20 jaar creeren wij unieke, op maat gemaakte reizen
+                    naar de mooiste bestemmingen wereldwijd. Onze AI-assistent helpt
+                    u bij elke stap van uw reisplanning.
+                </p>
+
+                <h3>Wat kan onze assistent voor u doen?</h3>
+                <ul>
+                    <li>Bestemmingen ontdekken die bij u passen</li>
+                    <li>Reisadvies op maat voor families en avonturiers</li>
+                    <li>Informatie over duurzaam en verantwoord reizen</li>
+                    <li>Hulp bij het samenstellen van uw perfecte rondreis</li>
+                    <li>Antwoorden op al uw reisvragen</li>
+                </ul>
+
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="icon">🌍</div>
+                        <span>5 Continenten</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">👨‍👩‍👧‍👦</div>
+                        <span>Familie Reizen</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">🌿</div>
+                        <span>Duurzaam</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon">✨</div>
+                        <span>Op Maat</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Onze Bestemmingen</h2>
+                <p>
+                    Van de rijstvelden van Vietnam tot de gletsjers van Patagonië -
+                    ontdek de wereld met lokale experts die de verborgen parels kennen.
+                </p>
+
+                <div class="destinations-preview">
+                    <span class="destination-tag">Sri Lanka</span>
+                    <span class="destination-tag">Costa Rica</span>
+                    <span class="destination-tag">Japan</span>
+                    <span class="destination-tag">Vietnam</span>
+                    <span class="destination-tag">Jordanië</span>
+                    <span class="destination-tag">Peru</span>
+                    <span class="destination-tag">Indonesië</span>
+                    <span class="destination-tag">Canada</span>
+                    <span class="destination-tag">Griekenland</span>
+                    <span class="destination-tag">Bolivia</span>
+                </div>
+
+                <h3>Waarom Riksja Travel?</h3>
+                <ul>
+                    <li>B Corp gecertificeerd voor duurzaamheid</li>
+                    <li>Lokale partners en authentieke ervaringen</li>
+                    <li>Handgeselecteerde, unieke accommodaties</li>
+                    <li>Persoonlijke service en expertise</li>
+                    <li>Positieve impact op lokale gemeenschappen</li>
+                </ul>
+
+                <div class="cta-section">
+                    <p>Klik op de chat-knop rechtsonder om te beginnen!</p>
+                    <div class="arrow-indicator">↘</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Riksja Travel Chatbot Widget -->
+    <script src="src/knowledge-base.js"></script>
+    <script src="src/chatbot.js"></script>
+</body>
+</html>

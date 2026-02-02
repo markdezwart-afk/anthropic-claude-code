@@ -1,0 +1,664 @@
+/**
+ * Riksja Travel AI Chatbot Widget Styles
+ * A beautiful, accessible chatbot interface with Riksja Travel branding
+ */
+
+/* CSS Custom Properties for easy theming */
+:root {
+    --riksja-primary: #1a5f4a;
+    --riksja-primary-light: #2d8b6e;
+    --riksja-primary-dark: #134536;
+    --riksja-accent: #e8a54b;
+    --riksja-accent-light: #f5c77d;
+    --riksja-white: #ffffff;
+    --riksja-gray-100: #f8faf9;
+    --riksja-gray-200: #e8eeeb;
+    --riksja-gray-300: #d1ddd7;
+    --riksja-gray-400: #9bada3;
+    --riksja-gray-500: #6b8178;
+    --riksja-gray-600: #4a5c54;
+    --riksja-text: #2c3e36;
+    --riksja-shadow: rgba(26, 95, 74, 0.15);
+    --riksja-shadow-dark: rgba(0, 0, 0, 0.2);
+    --riksja-radius-sm: 8px;
+    --riksja-radius-md: 12px;
+    --riksja-radius-lg: 20px;
+    --riksja-radius-xl: 28px;
+    --riksja-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Chat Widget Container */
+.riksja-chatbot {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+/* Chat Toggle Button */
+.riksja-chat-toggle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--riksja-primary) 0%, var(--riksja-primary-light) 100%);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 20px var(--riksja-shadow-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--riksja-transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.riksja-chat-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px var(--riksja-shadow-dark);
+}
+
+.riksja-chat-toggle:active {
+    transform: scale(0.95);
+}
+
+.riksja-chat-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+    border-radius: 50%;
+}
+
+.riksja-chat-toggle svg {
+    width: 28px;
+    height: 28px;
+    fill: var(--riksja-white);
+    transition: var(--riksja-transition);
+}
+
+.riksja-chat-toggle .close-icon {
+    position: absolute;
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+.riksja-chatbot.open .riksja-chat-toggle .chat-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.riksja-chatbot.open .riksja-chat-toggle .close-icon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Notification Badge */
+.riksja-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 22px;
+    height: 22px;
+    background: var(--riksja-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--riksja-white);
+    border: 2px solid var(--riksja-white);
+    animation: badge-pulse 2s infinite;
+}
+
+@keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Chat Window */
+.riksja-chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 400px;
+    max-width: calc(100vw - 48px);
+    height: 600px;
+    max-height: calc(100vh - 140px);
+    background: var(--riksja-white);
+    border-radius: var(--riksja-radius-xl);
+    box-shadow: 0 12px 48px var(--riksja-shadow-dark);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.95);
+    transition: var(--riksja-transition);
+}
+
+.riksja-chatbot.open .riksja-chat-window {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* Chat Header */
+.riksja-chat-header {
+    background: linear-gradient(135deg, var(--riksja-primary) 0%, var(--riksja-primary-light) 100%);
+    color: var(--riksja-white);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    overflow: hidden;
+}
+
+.riksja-chat-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 150px;
+    height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.riksja-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--riksja-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.riksja-header-info {
+    flex: 1;
+}
+
+.riksja-header-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 2px;
+}
+
+.riksja-header-info p {
+    font-size: 13px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.riksja-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.riksja-status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Chat Body */
+.riksja-chat-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: var(--riksja-gray-100);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.riksja-chat-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.riksja-chat-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.riksja-chat-body::-webkit-scrollbar-thumb {
+    background: var(--riksja-gray-300);
+    border-radius: 3px;
+}
+
+.riksja-chat-body::-webkit-scrollbar-thumb:hover {
+    background: var(--riksja-gray-400);
+}
+
+/* Messages */
+.riksja-message {
+    display: flex;
+    gap: 10px;
+    animation: message-appear 0.3s ease-out;
+}
+
+@keyframes message-appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.riksja-message.user {
+    flex-direction: row-reverse;
+}
+
+.riksja-message-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    background: var(--riksja-white);
+    box-shadow: 0 2px 8px var(--riksja-shadow);
+}
+
+.riksja-message.user .riksja-message-avatar {
+    background: var(--riksja-primary-light);
+    color: var(--riksja-white);
+}
+
+.riksja-message-content {
+    max-width: 280px;
+    padding: 14px 18px;
+    border-radius: var(--riksja-radius-lg);
+    background: var(--riksja-white);
+    box-shadow: 0 2px 8px var(--riksja-shadow);
+    position: relative;
+}
+
+.riksja-message.user .riksja-message-content {
+    background: linear-gradient(135deg, var(--riksja-primary) 0%, var(--riksja-primary-light) 100%);
+    color: var(--riksja-white);
+}
+
+.riksja-message-content p {
+    margin: 0;
+    word-wrap: break-word;
+}
+
+.riksja-message-time {
+    font-size: 11px;
+    color: var(--riksja-gray-400);
+    margin-top: 6px;
+    display: block;
+}
+
+.riksja-message.user .riksja-message-time {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Quick Replies / Suggestions */
+.riksja-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.riksja-suggestion-btn {
+    background: var(--riksja-gray-100);
+    border: 1px solid var(--riksja-gray-300);
+    border-radius: var(--riksja-radius-lg);
+    padding: 10px 16px;
+    font-size: 14px;
+    color: var(--riksja-primary);
+    cursor: pointer;
+    transition: var(--riksja-transition);
+    font-family: inherit;
+}
+
+.riksja-suggestion-btn:hover {
+    background: var(--riksja-primary);
+    border-color: var(--riksja-primary);
+    color: var(--riksja-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--riksja-shadow);
+}
+
+/* Typing Indicator */
+.riksja-typing {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.riksja-typing-dots {
+    display: flex;
+    gap: 4px;
+    padding: 16px 20px;
+    background: var(--riksja-white);
+    border-radius: var(--riksja-radius-lg);
+    box-shadow: 0 2px 8px var(--riksja-shadow);
+}
+
+.riksja-typing-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--riksja-gray-400);
+    border-radius: 50%;
+    animation: typing-bounce 1.4s infinite ease-in-out;
+}
+
+.riksja-typing-dot:nth-child(1) { animation-delay: 0s; }
+.riksja-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.riksja-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-6px); }
+}
+
+/* Destination Cards */
+.riksja-destination-card {
+    background: var(--riksja-white);
+    border-radius: var(--riksja-radius-md);
+    padding: 16px;
+    margin-top: 12px;
+    border: 1px solid var(--riksja-gray-200);
+    transition: var(--riksja-transition);
+    cursor: pointer;
+}
+
+.riksja-destination-card:hover {
+    border-color: var(--riksja-primary-light);
+    box-shadow: 0 4px 16px var(--riksja-shadow);
+    transform: translateY(-2px);
+}
+
+.riksja-destination-card h4 {
+    color: var(--riksja-primary);
+    margin: 0 0 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.riksja-destination-card p {
+    color: var(--riksja-gray-600);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.riksja-destination-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.riksja-tag {
+    background: var(--riksja-gray-100);
+    color: var(--riksja-gray-600);
+    padding: 4px 10px;
+    border-radius: var(--riksja-radius-sm);
+    font-size: 12px;
+}
+
+/* Chat Input */
+.riksja-chat-input {
+    padding: 16px 20px;
+    background: var(--riksja-white);
+    border-top: 1px solid var(--riksja-gray-200);
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.riksja-input-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+.riksja-input-wrapper textarea {
+    width: 100%;
+    min-height: 44px;
+    max-height: 120px;
+    padding: 12px 16px;
+    border: 2px solid var(--riksja-gray-200);
+    border-radius: var(--riksja-radius-lg);
+    resize: none;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.4;
+    transition: var(--riksja-transition);
+    outline: none;
+}
+
+.riksja-input-wrapper textarea:focus {
+    border-color: var(--riksja-primary-light);
+    box-shadow: 0 0 0 3px rgba(45, 139, 110, 0.1);
+}
+
+.riksja-input-wrapper textarea::placeholder {
+    color: var(--riksja-gray-400);
+}
+
+.riksja-send-btn {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--riksja-primary) 0%, var(--riksja-primary-light) 100%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--riksja-transition);
+    flex-shrink: 0;
+}
+
+.riksja-send-btn:hover:not(:disabled) {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px var(--riksja-shadow);
+}
+
+.riksja-send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.riksja-send-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--riksja-white);
+    margin-left: 2px;
+}
+
+/* Welcome Screen */
+.riksja-welcome {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.riksja-welcome-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.riksja-welcome h4 {
+    color: var(--riksja-primary);
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.riksja-welcome p {
+    color: var(--riksja-gray-600);
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+/* Quick Start Options */
+.riksja-quick-start {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.riksja-quick-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: var(--riksja-white);
+    border: 1px solid var(--riksja-gray-200);
+    border-radius: var(--riksja-radius-md);
+    cursor: pointer;
+    transition: var(--riksja-transition);
+    text-align: left;
+    font-family: inherit;
+}
+
+.riksja-quick-option:hover {
+    border-color: var(--riksja-primary-light);
+    background: var(--riksja-gray-100);
+    transform: translateX(4px);
+}
+
+.riksja-quick-option .icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.riksja-quick-option span {
+    color: var(--riksja-text);
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .riksja-chatbot {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .riksja-chat-window {
+        width: calc(100vw - 32px);
+        height: calc(100vh - 100px);
+        bottom: 76px;
+        right: 0;
+        border-radius: var(--riksja-radius-lg);
+    }
+
+    .riksja-chat-toggle {
+        width: 56px;
+        height: 56px;
+    }
+
+    .riksja-chat-header {
+        padding: 16px 20px;
+    }
+
+    .riksja-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .riksja-message-content {
+        max-width: 240px;
+        padding: 12px 14px;
+    }
+}
+
+/* Accessibility */
+.riksja-chat-toggle:focus,
+.riksja-suggestion-btn:focus,
+.riksja-send-btn:focus,
+.riksja-quick-option:focus {
+    outline: 3px solid var(--riksja-accent);
+    outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .riksja-chat-window {
+        background: #1a1f1c;
+    }
+
+    .riksja-chat-body {
+        background: #0f1311;
+    }
+
+    .riksja-message-content {
+        background: #262d29;
+        color: #e8eeeb;
+    }
+
+    .riksja-message.user .riksja-message-content {
+        background: linear-gradient(135deg, var(--riksja-primary) 0%, var(--riksja-primary-light) 100%);
+    }
+
+    .riksja-chat-input {
+        background: #1a1f1c;
+        border-color: #2d3532;
+    }
+
+    .riksja-input-wrapper textarea {
+        background: #262d29;
+        border-color: #3d4843;
+        color: #e8eeeb;
+    }
+
+    .riksja-suggestion-btn {
+        background: #262d29;
+        border-color: #3d4843;
+        color: var(--riksja-primary-light);
+    }
+
+    .riksja-destination-card {
+        background: #262d29;
+        border-color: #3d4843;
+    }
+
+    .riksja-destination-card h4 {
+        color: var(--riksja-primary-light);
+    }
+
+    .riksja-destination-card p {
+        color: #9bada3;
+    }
+}
