@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vacature-dashboard — Mark de Zwart</title>
+<link rel="stylesheet" href="app/styles.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">MdZ</div>
+      <div>
+        <div class="brand-title">Vacatures</div>
+        <div class="brand-sub">Mark de Zwart</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-section">Categorieën</div>
+      <button class="nav-item active" data-category="all">
+        <span class="dot dot-all"></span> Alle vacatures
+        <span class="count" id="count-all">0</span>
+      </button>
+      <button class="nav-item" data-category="financieel">
+        <span class="dot dot-financieel"></span> Financieel
+        <span class="count" id="count-financieel">0</span>
+      </button>
+      <button class="nav-item" data-category="sociaal">
+        <span class="dot dot-sociaal"></span> Sociaal
+        <span class="count" id="count-sociaal">0</span>
+      </button>
+      <button class="nav-item" data-category="ecologisch">
+        <span class="dot dot-ecologisch"></span> Ecologisch
+        <span class="count" id="count-ecologisch">0</span>
+      </button>
+
+      <div class="nav-section">Filters</div>
+      <label class="slider-field">
+        <span>Min. score: <b id="score-val">0</b></span>
+        <input type="range" id="score-slider" min="0" max="100" step="5" value="0">
+      </label>
+
+      <div class="nav-section">Sorteren</div>
+      <select id="sort-select">
+        <option value="score-desc">Score (hoog → laag)</option>
+        <option value="score-asc">Score (laag → hoog)</option>
+        <option value="titel">Titel (A-Z)</option>
+        <option value="bedrijf">Bedrijf (A-Z)</option>
+      </select>
+    </nav>
+
+    <div class="sidebar-footer">
+      Gegenereerd door <code>job-orchestrator</code>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <h1 id="page-title">Alle vacatures</h1>
+      <div class="search">
+        <input type="search" id="search-input" placeholder="Zoek op titel, bedrijf of trefwoord…">
+      </div>
+    </header>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="col-title">Vacature</th>
+            <th class="col-company">Organisatie</th>
+            <th class="col-category">Categorie</th>
+            <th class="col-score">Match</th>
+            <th class="col-location">Locatie</th>
+            <th class="col-salary">Salaris</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+      <div class="empty" id="empty-state" hidden>
+        <div class="empty-icon">◔</div>
+        <div class="empty-title">Nog geen vacatures gevonden</div>
+        <div class="empty-body">
+          Start de <code>job-orchestrator</code> subagent in Claude Code.<br>
+          Die genereert <code>vacatures/data.js</code> met alle gevonden vacatures.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="detail" id="detail-panel" aria-hidden="true">
+    <div class="detail-head">
+      <button class="btn-icon" id="detail-close" title="Sluiten">×</button>
+      <a class="btn-icon" id="detail-link" target="_blank" rel="noopener" title="Open vacature">↗</a>
+    </div>
+    <div class="detail-body" id="detail-body"></div>
+  </aside>
+</div>
+
+<script src="vacatures/data.js"></script>
+<script src="app/app.js"></script>
+</body>
+</html>

@@ -65,12 +65,46 @@ Schrijf na afloop `vacatures/overzicht.md` met:
 - Per categorie een gesorteerde lijst (hoogste match eerst) met titel, bedrijf, score en link.
 - Korte observaties: welke drijfveer levert de sterkste matches? Welke gaps zien we?
 
+## Front-end data (verplicht)
+De repo bevat een statisch dashboard (`index.html` + `app/`) dat vacatures visueel toont. Schrijf **altijd** een bijgewerkte `vacatures/data.js` met de volledige lijst, zodat het dashboard de nieuwe data laadt. Het formaat is exact:
+
+```js
+window.VACATURES = [
+  {
+    "id": "slug-uniek",                       // bedrijf-functie-slug, kleine letters
+    "titel": "...",
+    "bedrijf": "...",
+    "categorie": "financieel|sociaal|ecologisch",
+    "score": 0-100,
+    "score_breakdown": { "vaardigheden": 0-40, "ervaring": 0-30, "drijfveer": 0-20, "praktisch": 0-10 },
+    "locatie": "...",
+    "salaris_indicatie": "...",
+    "type_organisatie": "...",
+    "b_corp_gecertificeerd": true|false,      // alleen voor ecologisch
+    "b_corp_score": "...",                    // optioneel
+    "url": "https://...",
+    "bron": "...",
+    "waarom_match": "...",                    // voor financieel
+    "impact_toelichting": "...",              // voor sociaal/ecologisch
+    "aandachtspunten": "...",
+    "kernverantwoordelijkheden": ["..."],
+    "gevraagde_ervaring": ["..."]
+  }
+];
+```
+
+Belangrijk:
+- Schrijf als één `.js`-bestand met `window.VACATURES = [...]` — dus géén `.json`, omdat het dashboard het bestand via `<script>` inlaadt (werkt zonder lokale server).
+- Overschrijf altijd het hele bestand met de volledige actuele lijst.
+- Zorg dat elke `id` uniek is en URL-safe is.
+
 ## Werkvolgorde
 1. CV-check
 2. Subagents parallel aanroepen (één bericht, drie `Agent`-calls)
 3. Raw outputs verzamelen en categoriseren
 4. Scoren en markdown-bestanden schrijven
-5. Overzichtsrapport genereren
-6. Korte samenvatting aan de gebruiker teruggeven met pad naar `vacatures/overzicht.md`
+5. `vacatures/data.js` genereren voor het dashboard
+6. Overzichtsrapport genereren
+7. Korte samenvatting aan de gebruiker teruggeven: pad naar `vacatures/overzicht.md` én tip om `index.html` in de browser te openen.
 
 Houd de output beknopt in de chat - details staan in de bestanden.
