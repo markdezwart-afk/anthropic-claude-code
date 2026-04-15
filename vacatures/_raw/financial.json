@@ -1,0 +1,55 @@
+[
+  {
+    "_meta": {
+      "zoekdatum": "2026-04-15",
+      "status": "BEPERKTE_RESULTATEN",
+      "reden": "LinkedIn en Glassdoor blokkeren geautomatiseerde toegang (HTTP 403 op alle WebFetch-pogingen). Onderstaande vacatures zijn afkomstig uit Google-geindexeerde LinkedIn-snippets en zijn NIET volledig geverifieerd op salaris of actuele status. Verificatie door Mark zelf vereist.",
+      "webfetch_pogingen": 5,
+      "websearch_pogingen": 3
+    }
+  },
+  {
+    "titel": "EMEA Digital Marketing Manager",
+    "bedrijf": "Rubrik, Inc.",
+    "bedrijfsgrootte": ">5.000 medewerkers (beursgenoteerd Nasdaq: RBRK, cloud security multinational)",
+    "locatie": "Amsterdam, Noord-Holland, Nederland",
+    "salaris_indicatie": "Salaris onbekend - vereist verificatie. Glassdoor benchmark: EMEA Digital Marketing Manager Amsterdam gemiddeld EUR 8.000-8.600/mnd bruto.",
+    "url": "https://nl.linkedin.com/jobs/view/emea-digital-marketing-manager-at-rubrik-inc-2479900061",
+    "kernverantwoordelijkheden": [
+      "EMEA-brede digitale marketingcampagnes",
+      "Paid media advertising EMEA",
+      "Samenwerking met internationale marketingteams"
+    ],
+    "gevraagde_ervaring": [
+      "Ervaring met EMEA digitale marketing",
+      "B2B marketing kennis",
+      "Betaalde media / performance marketing"
+    ],
+    "bron": "LinkedIn (via Google-index)",
+    "drijfveer_match": "financieel",
+    "waarom_match": "EMEA-scope sluit direct aan op Marks Pure Fishing EMEA-rol. Rubrik is beursgenoteerd (>5.000 FTE), wat voldoet aan corporate-criterium. Salary benchmark voor deze rolklasse in Amsterdam ligt ruim boven EUR 5.500/mnd.",
+    "waarschuwing": "Vacature-ID 2479900061 is mogelijk verlopen - directe verificatie op LinkedIn vereist."
+  },
+  {
+    "titel": "Digital Marketing Manager",
+    "bedrijf": "Ahrend",
+    "bedrijfsgrootte": "Ahrend heeft circa 1.200-1.500 medewerkers (grote Nederlandse kantoorinrichter, onderdeel van meerdere internationale joint ventures)",
+    "locatie": "Amsterdam, Nederland",
+    "salaris_indicatie": "Salaris onbekend - vereist verificatie. Glassdoor benchmark Digital Marketing Manager Amsterdam: EUR 6.500-8.000/mnd bruto voor senior profiel.",
+    "url": "https://nl.linkedin.com/jobs/view/digital-marketing-manager-at-ahrend-4161485894",
+    "kernverantwoordelijkheden": [
+      "Beheer digitale marketingkanalen",
+      "Strategie en uitvoering online marketing",
+      "Content en campagnemanagement"
+    ],
+    "gevraagde_ervaring": [
+      "Digitale marketingervaring",
+      "Strategie en uitvoering gecombineerd",
+      "B2B of retail marketing"
+    ],
+    "bron": "LinkedIn (via Google-index)",
+    "drijfveer_match": "financieel",
+    "waarom_match": "Vacature-ID 4161485894 is recent (hoog nummer = recente posting). Ahrend telt circa 1.200+ medewerkers en voldoet aan corporate-criterium. Marks profiel (multi-brand digital lead, campagnemanagement, strategie) sluit sterk aan.",
+    "waarschuwing": "Bedrijfsgrootte Ahrend zit op ondergrens van 1.000 FTE-criterium - verificeer actueel medewerkersaantal voor definitieve geschiktheid."
+  }
+]

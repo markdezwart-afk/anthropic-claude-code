@@ -1,81 +1,57 @@
-// Wordt overschreven door de job-orchestrator subagent.
-// Placeholder met 3 voorbeelden zodat de UI direct werkt.
+// Gegenereerd door de finder-agents op 2026-04-15.
+// Let op: LinkedIn blokkeerde directe URL-fetches (HTTP 403) tijdens deze run.
+// De 2 financiële vacatures zijn afgeleid uit Google-geïndexeerde LinkedIn-snippets
+// en vragen handmatige verificatie. Sociaal en ecologisch zijn leeg — zie overzicht.md.
+
 window.VACATURES = [
   {
-    id: "demo-1",
-    titel: "Senior Digital Marketing Manager EMEA",
-    bedrijf: "ING",
+    id: "rubrik-emea-digital-marketing-manager",
+    titel: "EMEA Digital Marketing Manager",
+    bedrijf: "Rubrik, Inc.",
     categorie: "financieel",
-    score: 82,
-    score_breakdown: { vaardigheden: 34, ervaring: 25, drijfveer: 16, praktisch: 7 },
+    score: 83,
+    score_breakdown: { vaardigheden: 32, ervaring: 26, drijfveer: 18, praktisch: 7 },
     locatie: "Amsterdam",
-    salaris_indicatie: "€6.200 – €7.500 /mnd",
-    type_organisatie: "Grote corporate (banking)",
-    url: "https://www.ing.jobs/",
-    bron: "LinkedIn (voorbeeld)",
-    waarom_match: "Sluit aan bij je EMEA-ervaring bij Pure Fishing en Decathlon. Groot budget, strategisch en omnichannel — precies jouw profiel.",
-    aandachtspunten: "Financiële sector is nieuw voor je; verwacht 3–6 maanden inwerken in compliance-context.",
+    salaris_indicatie: "€8.000–€8.600/mnd (Glassdoor benchmark, niet bevestigd)",
+    type_organisatie: "Beursgenoteerde multinational (Nasdaq: RBRK, >5.000 FTE, cloud security)",
+    url: "https://nl.linkedin.com/jobs/view/emea-digital-marketing-manager-at-rubrik-inc-2479900061",
+    bron: "LinkedIn (via Google-index — VERIFICATIE VEREIST)",
+    waarom_match: "EMEA-scope sluit direct aan op Marks Pure Fishing EMEA-rol. Rubrik is beursgenoteerd, ruim boven 1.000 FTE, en salary-benchmark voor deze rolklasse in Amsterdam ligt ruim boven €5.500. B2B tech-context is nieuw — inwerkperiode nodig.",
+    aandachtspunten: "Vacature-ID is uit 2021 (2479xxxxxx) — mogelijk verlopen. Eerst op LinkedIn verifiëren. Tech/B2B-security is nieuw domein voor Mark, weg van consumer-marketing.",
     kernverantwoordelijkheden: [
-      "Leiden van omnichannel campagnes voor EMEA",
-      "Stakeholder-management met lokale markten",
-      "Performance-rapportage aan C-level"
+      "EMEA-brede digitale marketingcampagnes",
+      "Paid media advertising EMEA",
+      "Samenwerking met internationale marketingteams"
     ],
     gevraagde_ervaring: [
-      "7+ jaar digital marketing",
-      "Ervaring met grote budgetten en agencies",
-      "Nederlands en Engels vloeiend"
+      "Ervaring met EMEA digitale marketing",
+      "B2B marketing kennis",
+      "Betaalde media / performance marketing"
     ]
   },
   {
-    id: "demo-2",
-    titel: "Docent Marketing & Digital Transformation",
-    bedrijf: "Hogeschool Rotterdam",
-    categorie: "sociaal",
-    score: 88,
-    score_breakdown: { vaardigheden: 36, ervaring: 26, drijfveer: 18, praktisch: 8 },
-    locatie: "Rotterdam",
-    salaris_indicatie: "Schaal 11 (€4.100 – €5.600)",
-    type_organisatie: "Onderwijsinstelling (HBO)",
-    url: "https://werkenbij.hr.nl/",
-    bron: "Academic Transfer (voorbeeld)",
-    waarom_match: "Je huidige rol bij HvA laat zien dat onderwijs jouw ding is. Sterke match met je lectorship en internationalisering-focus.",
-    aandachtspunten: "Salaris lager dan corporate alternatief — afweging met intrinsieke motivatie.",
-    kernverantwoordelijkheden: [
-      "Onderwijs verzorgen in digital marketing",
-      "Curriculumontwikkeling",
-      "Begeleiden van afstudeerprojecten"
-    ],
-    gevraagde_ervaring: [
-      "HBO/WO werk- en denkniveau",
-      "Didactische aantekening (of bereid te halen)",
-      "Praktijkervaring in digital marketing"
-    ]
-  },
-  {
-    id: "demo-3",
-    titel: "Marketing & Campaign Lead",
-    bedrijf: "Tony's Chocolonely",
-    categorie: "ecologisch",
-    score: 79,
-    score_breakdown: { vaardigheden: 32, ervaring: 24, drijfveer: 17, praktisch: 6 },
+    id: "ahrend-digital-marketing-manager",
+    titel: "Digital Marketing Manager",
+    bedrijf: "Ahrend",
+    categorie: "financieel",
+    score: 77,
+    score_breakdown: { vaardigheden: 30, ervaring: 25, drijfveer: 15, praktisch: 7 },
     locatie: "Amsterdam",
-    salaris_indicatie: "€4.800 – €5.800 /mnd",
-    type_organisatie: "B-Corp gecertificeerd (food)",
-    b_corp_gecertificeerd: true,
-    b_corp_score: "B-Corp score 141.6",
-    url: "https://tonyschocolonely.com/nl/nl/onze-missie/vacatures",
-    bron: "Careers-pagina (voorbeeld)",
-    impact_toelichting: "Mission-driven bedrijf met 100% slaafvrije cacao als kernmissie; B-Corp sinds 2013.",
-    aandachtspunten: "Eerste echte B-Corp ervaring — impact rapportages zijn nieuw terrein.",
+    salaris_indicatie: "€6.500–€8.000/mnd (Glassdoor benchmark, niet bevestigd)",
+    type_organisatie: "Nederlandse kantoorinrichter (~1.200–1.500 FTE, ondergrens corporate-criterium)",
+    url: "https://nl.linkedin.com/jobs/view/digital-marketing-manager-at-ahrend-4161485894",
+    bron: "LinkedIn (via Google-index — VERIFICATIE VEREIST)",
+    waarom_match: "Recent gepost (ID 4161xxxxxx). Multi-kanaal digital marketing strategie + uitvoering, campagnemanagement en content — sluit sterk aan op Pure Fishing ervaring.",
+    aandachtspunten: "Bedrijfsgrootte zit op de ondergrens van het corporate-criterium (1.000 FTE). Kantoorinrichting is nieuw sector-terrein. Verifieer actueel medewerkersaantal.",
     kernverantwoordelijkheden: [
-      "Leiden van internationale campagnes",
-      "Missie-vertaling naar marketingcontent",
-      "Samenwerken met impact- en supply chain teams"
+      "Beheer digitale marketingkanalen",
+      "Strategie en uitvoering online marketing",
+      "Content en campagnemanagement"
     ],
     gevraagde_ervaring: [
-      "5+ jaar marketing, bij voorkeur FMCG",
-      "Affiniteit met sociale/ecologische missie",
-      "Verhalend kunnen campagnes bouwen"
+      "Digitale marketingervaring",
+      "Strategie en uitvoering gecombineerd",
+      "B2B of retail marketing"
     ]
   }
 ];
