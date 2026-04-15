@@ -2,7 +2,7 @@
 
 Plaats hier de input voor de job-orchestrator subagent:
 
-- `cv.md` — je CV (werkervaring, opleiding, skills, talen, etc.)
+- `cv.pdf` — je CV als PDF (werkervaring, opleiding, skills, talen, etc.)
 - `wensen.md` — optioneel: extra voorkeuren (locatie, contractvorm, thuiswerk-ratio, reistijd, no-go's, talen van de werkvloer, etc.)
 
 De orchestrator en de drie job-finder subagents lezen deze bestanden automatisch.
