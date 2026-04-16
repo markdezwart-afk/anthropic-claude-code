@@ -1,39 +1,56 @@
 # Vacature-overzicht — Mark de Zwart
 
-**Run**: 2026-04-15 · **Bron**: LinkedIn (beperkt)
+**Laatst bijgewerkt**: 2026-04-15
 
 ## Samenvatting
 | Categorie   | Aantal | Top-score |
 |-------------|--------|-----------|
 | Financieel  | 2      | 83/100    |
 | Sociaal     | 0      | —         |
-| Ecologisch  | 0      | —         |
+| Ecologisch  | 5      | 95/100    |
+| **Totaal**  | **7**  | **95/100**|
 
-## Top-matches (alle categorieën)
-1. **83/100** — EMEA Digital Marketing Manager @ Rubrik, Amsterdam (financieel)
-2. **77/100** — Digital Marketing Manager @ Ahrend, Amsterdam (financieel)
+## Top-5 matches (alle categorieën)
+1. **95/100** — Digital Marketing Manager @ Fairphone, Amsterdam (ecologisch) — *deadline mogelijk verlopen, check*
+2. **93/100** — Marketing Communications Lead @ B Lab Europe, Amsterdam (ecologisch)
+3. **83/100** — EMEA Digital Marketing Manager @ Rubrik, Amsterdam (financieel)
+4. **78/100** — Manager Marketing & Communicatie @ Auping, Deventer (ecologisch)
+5. **77/100** — Digital Marketing Manager @ Ahrend, Amsterdam (financieel)
 
-## Financieel
-| Score | Titel | Bedrijf | Link |
-|-------|-------|---------|------|
-| 83 | EMEA Digital Marketing Manager | Rubrik | [link](https://nl.linkedin.com/jobs/view/emea-digital-marketing-manager-at-rubrik-inc-2479900061) |
-| 77 | Digital Marketing Manager | Ahrend | [link](https://nl.linkedin.com/jobs/view/digital-marketing-manager-at-ahrend-4161485894) |
+## Ecologisch (5 vacatures)
+| Score | Titel | Bedrijf | B-Corp | Locatie |
+|-------|-------|---------|--------|---------|
+| 95 | Digital Marketing Manager | Fairphone | ✓ | Amsterdam (60% remote) |
+| 93 | Marketing Communications Lead | B Lab Europe | ✓ (certificeert alle B-Corps) | Amsterdam |
+| 78 | Manager Marketing & Communicatie | Auping | ✓ | Deventer |
+| 76 | Marketing Communicatie Specialist | Triodos Bank | — | Driebergen-Zeist |
+| 65 | Loyalty Marketeer | Vandebron | — | Amsterdam |
 
-## Sociaal
-Geen resultaten. LinkedIn blokkeerde directe fetches (HTTP 403). Google-indexering leverde alleen verouderde vacature-IDs uit 2022-2023. Er is geen geverifieerde data geschreven.
+## Financieel (2 vacatures)
+| Score | Titel | Bedrijf | Locatie |
+|-------|-------|---------|---------|
+| 83 | EMEA Digital Marketing Manager | Rubrik | Amsterdam |
+| 77 | Digital Marketing Manager | Ahrend | Amsterdam |
 
-**Suggestie van de agent** om handmatig te zoeken op:
-- Hogeschool Leiden, InHolland, mboRaad, Kennisnet, Ministerie OCW
-- Functietitels: "Docent / Lecturer HBO", "Programmamanager onderwijs", "Beleidsadviseur digitalisering"
-
-## Ecologisch
-Geen resultaten. Zelfde LinkedIn-403 probleem.
-
-**Suggestie van de agent**:
-- LinkedIn met bedrijfsfilter op Tony's Chocolonely, Fairphone, Dopper, Triodos, Vandebron
-- Alternatieve bronnen die niet blokkeren: [duurzamevacatures.nl](https://www.duurzamevacatures.nl), [greenjobs.nl](https://www.greenjobs.nl)
+## Sociaal (0 vacatures)
+Nog geen resultaten — LinkedIn blokkeerde eerste zoekronde. Te ondernemen:
+- Zoeken via academictransfer.com (wetenschappelijk onderwijs)
+- Meesterbaan.nl (HBO/MBO/onderwijs)
+- Werkenvoornederland.nl (publieke sector)
+- Jobs for Good (jobsforgood.nl)
 
 ## Observaties
-- **LinkedIn-only is problematisch in deze sandbox**: LinkedIn geeft HTTP 403 op alle directe URL-fetches. Alleen Google-snippets zijn beschikbaar, en die leveren veelal verouderde vacatures.
-- **Financiële rollen** waren iets makkelijker te vinden omdat grote corporates ook op eigen career-pagina's en derde partijen verschijnen.
-- **Aanbeveling**: breid de bronnen uit met sites die géén login vereisen (academictransfer.com, werkenvoornederland.nl, duurzamevacatures.nl, greenjobs.nl) voor sociaal en ecologisch.
+- **Ecologische drijfveer levert sterkste matches op**: Fairphone (95) en B Lab Europe (93) zijn bijna perfecte profielmatches — beide combineren Marks digital marketing expertise met een expliciete impact-missie.
+- **B Lab Europe is strategisch interessant**: werken bij de organisatie die B-Corps certificeert geeft uniek inzicht + netwerk.
+- **Auping is qua match sterk, qua locatie zwak**: overweeg of hybride/verhuizing haalbaar is.
+- **Financieel is dunner bezet**: corporate vacatures zijn moeilijker te verifiëren zonder LinkedIn-toegang.
+- **Sociaal moet nog gedaan worden** — apart aanpakken met alternatieve bronnen.
+
+## Data-bronnen
+- LinkedIn (beperkt via Google-index)
+- impactjobs.doen.nl
+- Werken-bij pagina's van Auping, Vandebron, Triodos
+- BeApplied (B Lab)
+
+## Verificatie
+Alle URL's zijn afkomstig uit publieke zoekresultaten. LinkedIn en meeste career-sites blokkeren directe fetches, dus vacature-details zijn samengesteld uit zoek-snippets. **Check elke URL handmatig** voordat je solliciteert, vooral Fairphone (deadline mogelijk verlopen).
