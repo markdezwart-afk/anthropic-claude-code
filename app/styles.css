@@ -141,10 +141,11 @@ body {
   padding: 12px; vertical-align: middle;
   font-size: 14px;
 }
-.col-title { width: 32%; }
-.col-company { width: 18%; }
-.col-category { width: 14%; }
-.col-score { width: 12%; }
+.col-title { width: 26%; }
+.col-company { width: 15%; }
+.col-category { width: 11%; }
+.col-score { width: 11%; }
+.col-deadline { width: 13%; }
 .col-location { width: 12%; }
 .col-salary { width: 12%; }
 
@@ -161,6 +162,34 @@ body {
 .badge-financieel { background: var(--cat-fin-bg); color: #b85c0a; }
 .badge-sociaal    { background: var(--cat-soc-bg); color: #1a7556; }
 .badge-ecologisch { background: var(--cat-eco-bg); color: #3d6b25; }
+
+/* Deadline */
+.deadline {
+  display: inline-block;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.deadline-expired {
+  color: var(--score-low);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+.deadline-urgent {
+  color: var(--score-low);
+  font-weight: 600;
+}
+.deadline-soon {
+  color: var(--score-mid);
+  font-weight: 500;
+}
+.deadline-normal {
+  color: var(--text);
+}
+.deadline-unknown {
+  color: var(--text-soft);
+  font-style: italic;
+}
 
 /* Score bar */
 .score { display: flex; align-items: center; gap: 8px; }
