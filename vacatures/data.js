@@ -1,7 +1,8 @@
 // Gegenereerd op 2026-04-15.
-// 2 financiële vacatures via LinkedIn (Google-index) + 5 ecologische vacatures
-// via career-pagina's en impactjobs.doen.nl. LinkedIn/directe career-sites blokkeerden
-// WebFetch (HTTP 403); resultaten zijn afgeleid uit zoekmachine-snippets.
+// 2 financieel (LinkedIn) + 5 ecologisch + 5 sociaal = 12 vacatures.
+// Bronnen: LinkedIn via Google-index, AcademicTransfer, Goede Doelen Nederland,
+// Plan International, BeApplied, impactjobs.doen.nl, werken-bij-pagina's.
+// Directe fetches werden veelal geblokkeerd (HTTP 403); data uit zoek-snippets.
 // Handmatige verificatie per URL aangeraden.
 
 window.VACATURES = [
@@ -167,6 +168,135 @@ window.VACATURES = [
       "Nederlandstalig"
     ]
   },
+  // ---------- SOCIAAL ----------
+  {
+    id: "uva-lecturer-digital-marketing",
+    titel: "(Senior) Lecturer Digital Marketing",
+    bedrijf: "University of Amsterdam (Amsterdam Business School)",
+    categorie: "sociaal",
+    score: 92,
+    score_breakdown: { vaardigheden: 38, ervaring: 28, drijfveer: 18, praktisch: 8 },
+    locatie: "Amsterdam",
+    salaris_indicatie: "CAO universiteiten — schaal 10–11, indicatie €4.400–€6.300",
+    type_organisatie: "Universiteit (publieke sector, WO)",
+    url: "https://www.academictransfer.com/en/jobs/352891/lecturer-digital-marketing",
+    bron: "AcademicTransfer",
+    impact_toelichting: "Onderwijs op topuniversiteit; vormt nieuwe generatie marketeers. Amsterdam Business School internationaal georiënteerd.",
+    aandachtspunten: "WO verwacht vaak meer onderzoek dan HBO. Salaris onder corporate alternatief.",
+    kernverantwoordelijkheden: [
+      "Onderwijs in digital marketing op bachelor/master niveau",
+      "Curriculum-ontwikkeling",
+      "Begeleiding afstudeerprojecten"
+    ],
+    gevraagde_ervaring: [
+      "WO-graad in marketing/business",
+      "Onderwijservaring gewenst",
+      "Praktijkervaring digital marketing"
+    ]
+  },
+  {
+    id: "hogeschoolhoofddocent-digitale-transitie",
+    titel: "Hogeschoolhoofddocent Digitale Transitie",
+    bedrijf: "Hogeschool (via AcademicTransfer — check welke)",
+    categorie: "sociaal",
+    score: 79,
+    score_breakdown: { vaardigheden: 34, ervaring: 22, drijfveer: 17, praktisch: 6 },
+    locatie: "Check via link",
+    salaris_indicatie: "CAO HBO schaal 12–13, indicatie €5.200–€7.300",
+    type_organisatie: "Hogeschool (publieke sector, HBO)",
+    url: "https://www.academictransfer.com/en/331149/hogeschoolhoofddocent-digitale-transitie/",
+    bron: "AcademicTransfer",
+    impact_toelichting: "HBO-onderwijs met focus op digitale transitie — raakt kern van Marks expertise.",
+    aandachtspunten: "Hoofddocent vraagt typisch PhD of vergelijkbare onderzoeksoutput.",
+    kernverantwoordelijkheden: [
+      "Onderwijs en curriculumontwikkeling digitale transitie",
+      "Onderzoeksprojecten leiden of bijdragen",
+      "Verbinding met beroepenveld"
+    ],
+    gevraagde_ervaring: [
+      "HBO-hoofddocent niveau",
+      "Diepgaande kennis digitale transitie",
+      "Onderzoekservaring gewenst"
+    ]
+  },
+  {
+    id: "kansfonds-hoofd-fondsenwerving-communicatie",
+    titel: "Hoofd Fondsenwerving & Communicatie",
+    bedrijf: "Kansfonds",
+    categorie: "sociaal",
+    score: 77,
+    score_breakdown: { vaardigheden: 28, ervaring: 24, drijfveer: 18, praktisch: 7 },
+    locatie: "Hilversum (hybride)",
+    salaris_indicatie: "tot €7.273/mnd (CAO Omroeppersoneel J, 36u)",
+    type_organisatie: "Stichting — armoedebestrijding & dakloosheid",
+    url: "https://goededoelennederland.nl/vacatures/hoofd-fondsenwerving-communicatie",
+    bron: "Goede Doelen Nederland",
+    impact_toelichting: "Kansfonds missie 'Iedereen een thuis' richt zich op armoede en dakloosheid in NL.",
+    aandachtspunten: "Vacature uit okt 2025 — mogelijk al ingevuld. Fondsenwerving is nieuw vakgebied.",
+    kernverantwoordelijkheden: [
+      "Leidinggeven aan teams fondsenwerving + communicatie (11 fte)",
+      "Groei via fondsen, donateurs, bedrijven, overheid",
+      "Positionering en zichtbaarheid versterken",
+      "Bijdrage aan meerjarenbeleid"
+    ],
+    gevraagde_ervaring: [
+      "Senior management-ervaring",
+      "Fondsenwerving of acquisitie-ervaring",
+      "Communicatie-leiderschap"
+    ]
+  },
+  {
+    id: "plan-international-senior-communicatieadviseur",
+    titel: "Senior Communicatieadviseur / Persvoorlichter",
+    bedrijf: "Plan International Nederland",
+    categorie: "sociaal",
+    score: 74,
+    score_breakdown: { vaardigheden: 24, ervaring: 24, drijfveer: 18, praktisch: 8 },
+    locatie: "Amsterdam",
+    salaris_indicatie: "Niet vermeld — NGO CAO indicatie €4.500–€6.000",
+    type_organisatie: "Internationale NGO (kinderrechten, gendergelijkheid)",
+    url: "https://www.planinternational.nl/vacatures",
+    bron: "Plan International",
+    impact_toelichting: "Plan International werkt wereldwijd aan kinderrechten en gelijkheid voor meisjes.",
+    aandachtspunten: "Perswoordvoering is nieuw specialisme voor Mark. NGO-salaris onder corporate.",
+    kernverantwoordelijkheden: [
+      "Senior advies op communicatiestrategie",
+      "Persvoorlichting en mediarelaties",
+      "Campagne-ondersteuning"
+    ],
+    gevraagde_ervaring: [
+      "5+ jaar senior communicatie",
+      "NGO-context pre",
+      "Nederlandstalig + Engels"
+    ]
+  },
+  {
+    id: "associate-lector-waardengedreven-sturen",
+    titel: "Associate Lector Waardengedreven Sturen",
+    bedrijf: "Digital Business & Media Knowledge Center",
+    categorie: "sociaal",
+    score: 61,
+    score_breakdown: { vaardigheden: 28, ervaring: 14, drijfveer: 15, praktisch: 4 },
+    locatie: "Check via link",
+    salaris_indicatie: "CAO HBO schaal 13, indicatie €5.800–€7.400",
+    type_organisatie: "Hogeschool — lectoraat Marketing & Customer Experience",
+    url: "https://www.academictransfer.com/en/330356/associate-lector-waardengedreven-sturen/",
+    bron: "AcademicTransfer",
+    impact_toelichting: "Lectoraat dat brug slaat tussen waardengedreven leiderschap en marketingpraktijk.",
+    aandachtspunten: "60% onderzoek — Mark is praktijkgericht. PhD of equivalent meestal vereist.",
+    kernverantwoordelijkheden: [
+      "Minimaal 60% onderzoek bij lectoraat",
+      "Onderwijs aan bachelor/master",
+      "Publicaties en kennisdeling"
+    ],
+    gevraagde_ervaring: [
+      "Promotie of vergelijkbaar onderzoeksniveau",
+      "Ervaring in marketing/CX onderzoek",
+      "Netwerk in digital business"
+    ]
+  },
+
+  // ---------- einde sociaal ----------
   {
     id: "vandebron-loyalty-marketeer",
     titel: "Loyalty Marketeer",
